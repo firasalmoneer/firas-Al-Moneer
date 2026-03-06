@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>محرك بحث التفسير — الأستاذ فراس المنير</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap">
+      <div class="title">
+        <div class="h1">محرك بحث التفسير</div>
+        <div class="sub">بحث ذكي مُرتّب بالصلة داخل كتاب واحد (يعمل دون إنترنت ودون Terminal).</div>
+      </div>
+      <div class="meta" id="metaBox"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <div class="cardTitle">اكتب سؤالك أو عبارتك</div>
+      <div class="searchRow">
+        <input id="q" class="input" placeholder="مثال: ما معنى التسبيح بحمد ربك؟"/>
+        <button id="go" class="btn">بحث</button>
+        <button id="clear" class="btn ghost">مسح</button>
+      </div>
+      <div class="hint">
+        هذا البحث ليس مطابقًا حرفيًا فقط: يقوم بتطبيع العربية (همزات/تاء مربوطة/تشكيل...) ويستخدم فهرسة BM25 لإظهار المقاطع الأكثر صلة.
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="cardTitle">النتائج</div>
+      <div class="small" id="status"></div>
+      <div id="results"></div>
+    </section>
+
+    <section class="card" id="openCard" style="display:none">
+      <div class="openHead">
+        <div>
+          <div class="cardTitle" id="openTitle">المقطع</div>
+          <div class="small" id="openCite"></div>
+        </div>
+        <button class="btn ghost" id="close">إغلاق</button>
+      </div>
+      <div class="openBody" id="openBody"></div>
+    </section>
+
+    <footer class="foot small">
+      يعمل محليًا — HTML/CSS/JS فقط — كل النتائج مقتبسة حرفيًا من النص.
+    </footer>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
